@@ -1,0 +1,33 @@
+.user-adress{
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-closer{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 3px 5px;
+  color: aliceblue;
+  background-color: red;
+  cursor: pointer;
+}
+
+.popup-shadow{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, 0.7);
+}
+
+.popup-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 10px;
+  background-color: azure;
+  box-sizing: border-box;
+}

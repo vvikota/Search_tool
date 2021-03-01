@@ -1,0 +1,51 @@
+.user__list{
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 0;
+}
+
+.user__card{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  padding: 3px;
+  border: 1px solid green;
+}
+
+.user-information{
+  display: flex;
+  flex-direction: column;
+}
+
+.user__card button{
+  width: 200px;
+  height: 50px;
+  border: none;
+  color: aqua;
+  background-color: red;
+  cursor: pointer;
+}
+
+.user-name{
+  cursor: pointer;
+}
+
+.user-name:hover{
+  color: blueviolet;
+  text-decoration: underline;
+}
+
+.marked-text{
+  background-color: lime;
+}
+
+@media(max-width: 480px){
+  .user__card{
+    flex-direction: column;
+  }
+
+  .user__card button{
+    margin-top: 15px;
+  }
+}
