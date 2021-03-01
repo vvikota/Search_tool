@@ -1,10 +1,18 @@
-import React from "react";
+import * as React from 'react';
 import './modal.css';
 import {connect} from "react-redux";
 import {getCurrentUser} from "../../redux/selectors"; 
 import {ActionCreator} from "../../redux/reducer";
+import {stateInterface, userInterface } from "../../types";
 
-const Modal = ({currentUser, closePopup}) => {
+interface modalProps {
+  currentUser: userInterface
+  closePopup: () => void
+}
+
+const Modal = (props: modalProps) => {
+    const {currentUser, closePopup} = props;
+    console.log(currentUser)
     return <div className="popup-shadow">
       <div className="popup-content">
         <h3>User information:</h3>
@@ -17,14 +25,13 @@ const Modal = ({currentUser, closePopup}) => {
         <span className="popup-closer" onClick={() => closePopup()}>Close</span>
       </div>
     </div>
-} 
+}
    
-const mapStateToProps = (state, ownProps) => ({
-  ...ownProps,
+const mapStateToProps = (state: stateInterface) => ({
   currentUser: getCurrentUser(state),
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = (dispatch: (arg0: { type: string; }) => void) => ({
   closePopup: () => dispatch(ActionCreator.closePopup()),
 });
 
