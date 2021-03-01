@@ -1,9 +1,9 @@
 export interface stateInterface {
   filterValue: string,
-  users: [] | userInterface[],
-  hiddenUsers: [],
+  users: userInterface[],
+  hiddenUsers: number[],
   isModalOpen: boolean,
-  currentUser: null | {}
+  currentUser: userInterface
 }
 
 export interface userInterface {

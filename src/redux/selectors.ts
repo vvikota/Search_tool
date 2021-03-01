@@ -1,10 +1,11 @@
+import { stateInterface } from './../types';
 import {createSelector} from "reselect";
 
-const getUsers = (state) => {
+const getUsers = (state: stateInterface) => {
   return state.users;
 }
 
-export const getHiddenUsers = (state) => {
+export const getHiddenUsers = (state: stateInterface) => {
   return state.hiddenUsers;
 }
 
@@ -16,14 +17,14 @@ export const getCurrentUsersList = createSelector(
   }
 );
 
-export const getCurrentUser = (state) => {
+export const getCurrentUser = (state: stateInterface) => {
   return state.currentUser
 }
 
-export const getIsModalOpen = (state) => {
+export const getIsModalOpen = (state: stateInterface) => {
   return state.isModalOpen
 }
 
-export const getFilterValue = (state) => {
+export const getFilterValue = (state: stateInterface) => {
   return state.filterValue
 }

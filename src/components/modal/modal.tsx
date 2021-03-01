@@ -12,7 +12,6 @@ interface modalProps {
 
 const Modal = (props: modalProps) => {
     const {currentUser, closePopup} = props;
-    console.log(currentUser)
     return <div className="popup-shadow">
       <div className="popup-content">
         <h3>User information:</h3>
