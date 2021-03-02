@@ -6,7 +6,7 @@ import {createStore, applyMiddleware} from "redux";
 import {Provider} from "react-redux";
 import {reducer, Operation} from "./redux/reducer.js";
 import thunk from "redux-thunk";
-import {configureAPI} from "./api";
+import {configureAPI} from "./api.ts";
 
 const init = () => {
   const api = configureAPI((...args) => store.dispatch(...args));
